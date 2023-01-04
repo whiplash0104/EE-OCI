@@ -10,6 +10,9 @@ Compilar imagen de contenedor
 ansible-builder build --tag ee_oci
 
 Cargar imágen en registry con Podman
+
+´´´
 podman login -u ${REGISTRY_NAMESPACE}/${USER} -p "${TOKEN}" ${REGION}.ocir.io
 podman tag localhost/ee_oci:latest iad.ocir.io/${REGISTRY_NAMESPACE}/${REGISTRY}:${TAG}
 podman push ${REGION}.ocir.io/${REGISTRY_NAMESPACE}/${REGISTRY}:${TAG}
+´´´
